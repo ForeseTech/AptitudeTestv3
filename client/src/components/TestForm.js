@@ -30,6 +30,9 @@ const useStyles = makeStyles({
   questionText: {
     fontFamily: "'Poppins', sans-serif",
     fontWeight: 600,
+    userSelect: 'none',
+    WebkitUserSelect: 'none',
+    MsUserSelect: 'none',
   },
   questionOptionsWrap: {
     margin: '1rem 0',
