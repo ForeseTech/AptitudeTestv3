@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { config } from 'dotenv';
 import {
   QUESTION_CREATE_REQUEST,
   QUESTION_CREATE_FAIL,

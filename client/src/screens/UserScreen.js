@@ -1,29 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { makeStyles } from '@material-ui/core';
 import Loader from '../components/Loader';
 import { getTestQuestions } from '../actions/questionActions';
 import FeedbackScreen from './FeedbackScreen';
 import UserAnswerScreen from './UserAnswerScreen';
 import TestScreen from './TestScreen';
 
-const useStyles = makeStyles({
-  root: {},
-});
-
 const UserScreen = ({ history }) => {
   const dispatch = useDispatch();
-
-  const classes = useStyles();
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
   const testQuestions = useSelector((state) => state.testQuestions);
   const { userAnswered, loading, questions } = testQuestions;
-
-  const timerStatus = useSelector((state) => state.timerStatus);
-  const { status } = timerStatus;
 
   useEffect(() => {
     dispatch(getTestQuestions());

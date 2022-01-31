@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { endTimer, getTime } from '../actions/timerActions';
-import { useDispatch, useSelector } from 'react-redux';
+import { endTimer } from '../actions/timerActions';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 
 const Timer = ({ refresh }) => {
