@@ -173,8 +173,8 @@ const LoginScreen = ({ history }) => {
             <span>4. All questions are compulsory.</span>
             <br></br>
             <span>
-              5. The test will auto-submit at 5:10 (Non-Circuit Students) and at
-              7:15 (Circuit Branch students)
+              5. The test will auto-submit at 5:10 P.M (Non-Circuit Students)
+              and at 7:15 P.M (Circuit Branch students)
             </span>
             <br></br>
             <span>
