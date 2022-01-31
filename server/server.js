@@ -23,11 +23,10 @@ app.use('/api/question', questionRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/timer', timerRoutes);
 
-app.use(notFound);
-app.use(errorHandler);
-
+console.log(path.join(__dirname, 'client', 'build'));
+console.log(path.join(__dirname, 'client', 'build', 'index.html'));
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client', 'build')));
+  app.use(express.static(path.join(__dirname, '/client/build')));
 
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
@@ -37,6 +36,9 @@ if (process.env.NODE_ENV === 'production') {
     res.send('API is running.....');
   });
 }
+
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
