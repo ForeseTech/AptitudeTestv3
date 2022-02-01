@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   root: {
     justifyContent: 'center',
     alignItems: 'center',
-    height: '70vh',
+    height: '100vh',
   },
   textField: {
     width: '20rem',
@@ -39,6 +39,9 @@ const useStyles = makeStyles({
     textAlign: 'center',
     margin: '0 0 2rem 0',
   },
+  orderedList: {
+    paddingLeft: '1.4rem',
+  },
   formBtn: {
     width: '20rem',
     backgroundColor: '#000',
@@ -46,7 +49,7 @@ const useStyles = makeStyles({
     '&:hover, &:focus': {
       backgroundColor: 'rgba(0,0,0,0.8)',
     },
-    margin: '1rem 0',
+    margin: '1.5rem 0',
   },
   instruction: {
     fontSize: '0.9rem',
@@ -88,7 +91,7 @@ const LoginScreen = ({ history }) => {
 
   return (
     <Container fixed className={classes.container}>
-      <Typography variant='h3' className={classes.title}>
+      <Typography variant='h4' className={classes.title}>
         APTITUDE TEST
       </Typography>
       {error ? (
@@ -97,11 +100,12 @@ const LoginScreen = ({ history }) => {
         ''
       )}
       <Grid container>
-        <Grid item md={6} className={classes.formWrap}>
+        <Grid item md={4} className={classes.formWrap}>
           <form className={classes.form} onSubmit={handleSubmit}>
             <TextField
               variant='outlined'
               required
+              autoFocus
               className={classes.textField}
               label='Name'
               onChange={(e) => setName(e.target.value)}
@@ -123,6 +127,7 @@ const LoginScreen = ({ history }) => {
               value={email}
               email={true}
               onChange={(e) => setEmail(e.target.value)}
+              helperText='Use your SVCE affiliated E-Mail ID only'
             />
             <TextField
               select
@@ -148,49 +153,65 @@ const LoginScreen = ({ history }) => {
             </Button>
           </form>
         </Grid>
-        <Grid item md={6}>
-          <Typography variant='h6'>Instructions</Typography>
+        <Grid item md={8}>
+          <Typography variant='h6'>INSTRUCTIONS</Typography>
           <Typography className={classes.instruction} varaint='subtitle2'>
-            <span>
-              1. You will not be allowed to retake the test under any
-              circumstances, hence please fill your details properly. No second
-              chances will be given.
-            </span>
-            <br></br>
-            <span>
-              2. There are 50 questions on the test, each consiting of 4
-              options, out of which only one is correct.<br></br>
-              Questions 1-10 will test your quantitative ability.<br></br>
-              Questions 11-20 will test your verbal reasoning.<br></br>
-              Questions 21-30 will test your programming skills.<br></br>
-              Questions 31-50 will test your core knowledge.<br></br>
-            </span>
-            <span>
-              3. 1 point is granted for every correct answer. There is no
-              negative marking.
-            </span>
-            <br></br>
-            <span>4. All questions are compulsory.</span>
-            <br></br>
-            <span>
-              5. The test will auto-submit at 5:10 P.M (Non-Circuit Students)
-              and at 7:15 P.M (Circuit Branch students)
-            </span>
-            <br></br>
-            <span>
-              6. You will be able to view the results of the test on the report
-              generation portal in the first week of February
-            </span>
-            <br></br>
-            <span>
-              7. Your answers will be passed through a plagiarism checker and
-              offenders will be reprimanded appropriately
-            </span>
-            <br></br>
-            <span>
-              8. Your answers will be lost on reloading the page. So, kindly
-              refrain from reloading the page.
-            </span>
+            <ol className={classes.orderedList}>
+              <li>
+                You will <b>not be allowed</b> to retake the test under any
+                circumstances, hence please fill your details properly. No
+                second chances will be given.
+              </li>
+              <li>
+                There are <b>50</b> questions on the test, each consiting of{' '}
+                <b>4</b> options, out of which only <b>one</b> is correct.
+                <ul>
+                  <li>
+                    Questions <b>1-10</b> will test your{' '}
+                    <b>quantitative ability</b>.
+                  </li>
+                  <li>
+                    Questions <b>11-20</b> will test your{' '}
+                    <b>verbal reasoning</b>.
+                  </li>
+                  <li>
+                    Questions <b>21-30</b> will test your{' '}
+                    <b>programming skills</b>.
+                  </li>
+                  <li>
+                    Questions <b>31-50</b> will test your <b>core knowledge</b>.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                All question are <b>compulsory</b>.
+              </li>
+              <li>
+                <b>1 point</b> is granted for every correct answer. There is no{' '}
+                <b>negative marking</b>.
+              </li>
+              <li>
+                The test will auto-submit at{' '}
+                <b>5:10 P.M (Non-Circuit Branch Students)</b> and at{' '}
+                <b>7:15 P.M (Circuit Branch Students)</b>.
+              </li>
+              <li>
+                You will be able to view the results of the test on the report
+                generation portal in the <b>second week of February</b>.
+              </li>
+              <li>
+                Your answers will be passed through a <b>plagiarism checker</b>{' '}
+                and offenders will be reprimanded appropriately.
+              </li>
+              <li>
+                Your answers{' '}
+                <b>
+                  will be lost on reloading the page or logging out of the
+                  software
+                </b>
+                .
+              </li>
+            </ol>
           </Typography>
         </Grid>
       </Grid>

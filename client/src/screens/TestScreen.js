@@ -31,8 +31,7 @@ const TestScreen = ({ questions }) => {
     <Container>
       <div className={classes.timerHeader}>
         <div className={classes.timerText}>
-          <TimerIcon />
-          <Typography variant='subtitle1'>Time Remaining</Typography>
+          <Typography variant='h6'>Time Remaining</Typography>
         </div>
         <Typography variant='h6'>
           <UserTimer />
