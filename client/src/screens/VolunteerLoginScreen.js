@@ -33,7 +33,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   formBtn: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Andada Pro', serif",
     width: '20rem',
     backgroundColor: '#150050',
     '&:hover, &:focus': {
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     },
   },
   title: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Andada Pro', serif",
     fontWeight: '500',
   },
 });

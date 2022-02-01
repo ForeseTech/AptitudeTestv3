@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   cardWrapper: {},
   title: {
     margin: '3rem 0',
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Andada Pro', serif",
     fontWeight: '500',
   },
   cardContainer: {

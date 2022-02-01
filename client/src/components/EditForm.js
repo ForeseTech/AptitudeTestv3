@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   btn: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Andada Pro', serif",
     fontWeight: '500',
     width: '8rem',
   },

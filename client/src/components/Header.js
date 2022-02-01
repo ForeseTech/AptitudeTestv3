@@ -26,13 +26,13 @@ const useStyles = makeStyles({
   },
   headerTitle: {
     flexGrow: 1,
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Andada Pro', serif",
   },
   userTitle: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Andada Pro', serif",
   },
   listItem: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Andada Pro', serif",
     fontWeight: '900',
   },
   appBar: {
@@ -184,7 +184,7 @@ const Header = () => {
             className={classes.headerTitle}
           >
             {userInfo && userInfo.isVolunteer
-              ? 'Forsce Volunteer'
+              ? 'Forese Volunteer'
               : adminInfo && adminInfo
               ? 'ADMIN'
               : null}
