@@ -39,8 +39,8 @@ const FeedbackScreen = () => {
 
   const dispatch = useDispatch();
 
-  const [rating, setRating] = useState(1);
-  const [difficulty, setDifficulty] = useState(1);
+  const [rating, setRating] = useState(3);
+  const [difficulty, setDifficulty] = useState(3);
   const [open, setOpen] = useState(false);
 
   const [review, setReview] = useState('');
@@ -67,7 +67,7 @@ const FeedbackScreen = () => {
       </Typography>
       <div className={classes.input}>
         <Typography variant='h6'>
-          How would you rate your experience with software ?
+          How would you rate your experience with the software?
         </Typography>
         <RatingStar
           rating={rating}
@@ -78,7 +78,7 @@ const FeedbackScreen = () => {
       </div>
       <div className={classes.input}>
         <Typography variant='h6'>
-          What was the difficulty level of the question ?
+          How would you rate the difficulty level of the questions?
         </Typography>
         <RatingStar
           rating={difficulty}
@@ -89,7 +89,7 @@ const FeedbackScreen = () => {
       </div>
       <div className={classes.input}>
         <Typography variant='h6'>
-          Did you find this exam relevant and useful ?
+          Did you find this exam relevant and useful?
         </Typography>
       </div>
       <div className={classes.input}>
