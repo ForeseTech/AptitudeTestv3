@@ -1,6 +1,5 @@
 import React from 'react';
 import { Typography, makeStyles, Container } from '@material-ui/core';
-import { Timer as TimerIcon } from '@material-ui/icons';
 import TestForm from '../components/TestForm';
 import UserTimer from '../components/UserTimer';
 
