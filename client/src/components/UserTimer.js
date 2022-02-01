@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { endTimer } from '../actions/timerActions';
+import {endUserTimer } from '../actions/timerActions';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 
@@ -38,7 +38,7 @@ const UserTimer = () => {
       );
     } else {
       clearInterval(intervalRef.current);
-      dispatch(endTimer());
+      dispatch(endUserTimer());
     }
   };
 
@@ -64,11 +64,6 @@ const UserTimer = () => {
       setEndDate(data[0].endTime);
     }
   };
-
-  // const onClickReset = () => {
-  //     if(intervalRef.current) clearInterval(intervalRef.current)
-  //     clearTimer(getDeadline())
-  // }
 
   return <>{timer}</>;
 };

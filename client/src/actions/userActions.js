@@ -43,7 +43,7 @@ export const login =
         localStorage.setItem('userInfo', JSON.stringify(data));
         localStorage.removeItem('adminInfo');
       } else {
-        throw new Error('TEST HAS NOT YET STARTED');
+        throw new Error('NOT ALLOWED');
       }
     } catch (error) {
       dispatch({
