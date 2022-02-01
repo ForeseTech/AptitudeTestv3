@@ -113,6 +113,9 @@ const EditForm = ({
           variant='outlined'
           label='Question'
           placeholder='Enter your Question'
+          multiline
+          rows={3}
+          maxRows={Infinity}
           onChange={(e) => updateQuestion(e.target.value, i)}
         />
         <TextField
