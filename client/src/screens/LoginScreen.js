@@ -163,6 +163,10 @@ const LoginScreen = ({ history }) => {
                 second chances will be given.
               </li>
               <li>
+                We stronly suggest that you keep a <b>pen and paper</b> along
+                with yourself <b>before beginning the test</b>.
+              </li>
+              <li>
                 There are <b>50</b> questions on the test, each consiting of{' '}
                 <b>4</b> options, out of which only <b>one</b> is correct.
                 <ul>
