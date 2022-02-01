@@ -11,12 +11,10 @@ const Timer = ({ refresh }) => {
   const [timer, setTimer] = useState('00:00:00');
   const [endDate, setEndDate] = useState();
   const [start, setStart] = useState();
-  // deadline.setSeconds(deadline.getSeconds()+3600);
 
   useEffect(() => {
     getTimings();
     clearTimer(getDeadline());
-    // return () => {if(intervalRef.current) clearInterval(intervalRef.current)}
   }, [endDate, start, refresh]);
 
   const getTimeRemaining = (end) => {
