@@ -18,7 +18,7 @@ import { useHistory } from 'react-router-dom';
 import { Menu as MenuIcon, AccountCircle } from '@material-ui/icons';
 import { userLogout } from '../actions/userActions';
 import { adminLogout } from '../actions/adminActions';
-import logo from '../images/forese_logo.png';
+import logo from '../images/logo.png';
 
 const useStyles = makeStyles({
   root: {
@@ -41,9 +41,6 @@ const useStyles = makeStyles({
   menuButton: {
     marginLeft: 0,
     marginRight: 20,
-  },
-  list: {
-    width: 250,
   },
   fullList: {
     width: 'auto',
