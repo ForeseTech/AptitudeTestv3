@@ -52,8 +52,8 @@ const useStyles = makeStyles({
     margin: '1.5rem 0',
   },
   instruction: {
-    fontSize: '0.9rem',
-    lineHeight: '1.7',
+    fontSize: '1rem',
+    lineHeight: '1.4',
   },
 });
 
@@ -100,7 +100,7 @@ const LoginScreen = ({ history }) => {
         ''
       )}
       <Grid container>
-        <Grid item md={4} className={classes.formWrap}>
+        <Grid item xs={12} md={4} className={classes.formWrap}>
           <form className={classes.form} onSubmit={handleSubmit}>
             <TextField
               variant='outlined'
@@ -153,7 +153,7 @@ const LoginScreen = ({ history }) => {
             </Button>
           </form>
         </Grid>
-        <Grid item md={8}>
+        <Grid item xs={12} md={8}>
           <Typography variant='h6'>INSTRUCTIONS</Typography>
           <Typography className={classes.instruction} varaint='subtitle2'>
             <ol className={classes.orderedList}>
