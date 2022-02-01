@@ -20,7 +20,7 @@ export const startTimer = (endTime) => async (dispatch) => {
 
 export const endTimer = () => async (dispatch) => {
   let start = true;
-  let testCompleted = true;
+  let testCompleted = false;
   let endTime = new Date().toISOString();
   await axios.post('/api/timer/', { start, endTime, testCompleted });
 
