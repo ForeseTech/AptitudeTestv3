@@ -16,43 +16,30 @@ import SubmitDialog from './SubmitDialog';
 
 const useStyles = makeStyles({
   questionNo: {
-    fontFamily: "'Poppins', sans-serif",
+    fontFamily: "'Andada Pro', serif",
     fontWeight: '300',
     margin: '5px 0',
   },
   questionSpan: {
-    fontSize: '1rem',
-  },
-  questionContent: {
-    margin: '2rem 0',
-    minHeight: '55vh',
+    fontSize: '1.1rem',
   },
   questionText: {
-    fontFamily: "'Poppins', sans-serif",
-    fontWeight: 600,
+    fontFamily: "'Andada Pro', serif",
+    fontWeight: 500,
+    fontSize: '1.07rem',
+    padding: '1rem',
+    lineHeight: '1.4rem',
+    whiteSpace: 'pre-line',
     userSelect: 'none',
     WebkitUserSelect: 'none',
     MsUserSelect: 'none',
   },
-  questionOptionsWrap: {
-    margin: '1rem 0',
-  },
   questionOption: {
-    margin: '0.7rem 0',
+    margin: '0.1rem 0',
   },
   questionFooter: {
     display: 'flex',
     justifyContent: 'space-between',
-    padding: '0 0 4rem 0',
-  },
-  stepper: {
-    width: '400',
-  },
-  MuiMobileStepperProgress: {
-    width: '100%',
-  },
-  PageRoot: {
-    margin: '0rem 0',
   },
   header: {
     display: 'flex',
@@ -111,40 +98,38 @@ const TestForm = ({ history, questions }) => {
     <div className={classes.PageRoot}>
       {answers ? (
         <>
-          {answers.map((ques, i) =>
+          {answers.map((question, i) =>
             i === counter ? (
               <div>
                 <div className={classes.header}>
                   <Typography className={classes.questionNo} variant='h6'>
-                    Question {i + 1}
-                    <span className={classes.questionSpan}>
-                      {' '}
-                      /{answers.length}
-                    </span>
+                    <b>{i + 1}</b>
+                    <span className={classes.questionSpan}>/50</span>
                   </Typography>
                   <Typography variant='h6'>
-                    {ques.questionCategory.toUpperCase()}
+                    {question.questionCategory.toUpperCase()}
                   </Typography>
                 </div>
-                {/* <MobileStepper sx={{width: 1}} variant="progress" position="static" steps={answers.length} activeStep={activeStep} /> */}
+
                 <div className={classes.questionContent}>
-                  <Typography className={classes.questionText} variant='h5'>
-                    {ques.questionText}
+                  <Typography className={classes.questionText}>
+                    {question.questionText}
                   </Typography>
-                  {ques.imageUrl && (
+                  {question.imageUrl && (
                     <img
-                      src={ques.imageUrl}
-                      alt={ques.imageUrl}
+                      src={question.imageUrl}
+                      alt={question.imageUrl}
                       className={classes.image}
                     />
                   )}
+
                   <FormControl className={classes.questionOptionsWrap}>
                     <RadioGroup
-                      value={ques.userAnswer}
+                      value={question.userAnswer}
                       onChange={(e) => handleAnswerChange(e, i)}
                       className={classes.questionOptions}
                     >
-                      {ques.options.map((op, j) => (
+                      {question.options.map((op, j) => (
                         <FormControlLabel
                           value={op.uid}
                           control={<Radio color='primary' />}
