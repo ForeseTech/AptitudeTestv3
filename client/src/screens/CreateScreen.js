@@ -177,9 +177,9 @@ const CreateScreen = ({ history }) => {
       },
     ]);
 
-    // setTimeout(() => {
-    //     window.location.reload(true)
-    // },2000)
+    setTimeout(() => {
+      window.location.reload(true)
+    }, 2000)
   };
 
   return (

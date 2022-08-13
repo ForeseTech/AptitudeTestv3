@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "62f20c58eb886c9128a20e6c"
+  },
+  "questionDept": "All",
+  "questionSet": "1",
+  "questionTitle": "Dummy Question",
+  "questionCategory": "Aptitude",
+  "options": [
+    {
+      "optionText": "Option 1",
+      "uid": "b6a1dd7e-218b-41e0-ad70-03e8e841d928",
+      "_id": {
+        "$oid": "62f20c58eb886c9128a20e6d"
+      }
+    },
+    {
+      "optionText": "Option 2",
+      "uid": "4baf0921-f6e6-4468-b5f9-97fcb9f5b116",
+      "_id": {
+        "$oid": "62f20c58eb886c9128a20e6e"
+      }
+    },
+    {
+      "optionText": "Option 3",
+      "uid": "c4331436-9f31-4d24-9c95-ed41c9cfdf39",
+      "_id": {
+        "$oid": "62f20c58eb886c9128a20e6f"
+      }
+    }
+  ],
+  "correctAnswer": "4baf0921-f6e6-4468-b5f9-97fcb9f5b116",
+  "userAnswer": null,
+  "imageUrl": "",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62f232cc0429c2b583f11be5"
+  },
+  "questionDept": "Automobile Engineering",
+  "questionSet": "1",
+  "questionTitle": "Question about Induction Motor",
+  "questionCategory": "Core",
+  "options": [
+    {
+      "optionText": "Option 1",
+      "uid": "9c99ceb4-45f5-4ed7-b9f3-4302627fea75",
+      "_id": {
+        "$oid": "62f232cc0429c2b583f11be6"
+      }
+    },
+    {
+      "optionText": "Opiton 2",
+      "uid": "20054e0e-ab8a-4ee5-8eb1-ceab9eaa8c58",
+      "_id": {
+        "$oid": "62f232cc0429c2b583f11be7"
+      }
+    },
+    {
+      "optionText": "Option 3",
+      "uid": "8bd8f391-dfac-4c6a-ad8b-5ff8aa867a69",
+      "_id": {
+        "$oid": "62f232cc0429c2b583f11be8"
+      }
+    },
+    {
+      "optionText": "Option 4",
+      "uid": "90b3ebfc-0fd3-4600-9f1a-dceed9eaceda",
+      "_id": {
+        "$oid": "62f232cc0429c2b583f11be9"
+      }
+    }
+  ],
+  "correctAnswer": "20054e0e-ab8a-4ee5-8eb1-ceab9eaa8c58",
+  "userAnswer": null,
+  "imageUrl": "",
+  "__v": 0
+}]
